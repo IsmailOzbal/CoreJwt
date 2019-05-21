@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Core2_2ApiJwt.BO;
+using Core2_2ApiJwt.Context.DbOperation;
+using Core2_2ApiJwt.Context.UnitOfWork;
 using Core2_2ApiJwt.Helpers;
 using Core2_2ApiJwt.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -11,6 +13,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -33,6 +36,9 @@ namespace Core2_2ApiJwt
         {
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddDbContext<DatabaseContext>(options =>
+           options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             // configure strongly typed settings objects
             var appSettingsSection = Configuration.GetSection("AppSettings");
@@ -62,6 +68,7 @@ namespace Core2_2ApiJwt
             // configure DI for application services
             services.AddScoped<IToken,GetTokenAndAuthentication>();
             services.AddScoped<IGetUser, GetAllUser>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

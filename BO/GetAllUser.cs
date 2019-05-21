@@ -9,13 +9,17 @@ namespace Core2_2ApiJwt.BO
 {
     public class GetAllUser : IGetUser
     {
+        private IUnitOfWork uow;
+        private IGenericRepository<User> user;
+        public GetAllUser(IUnitOfWork _uow)
+        {
+            uow = _uow;
+            user= uow.GetRepository<User>();
+        }
+
         public List<User> GetUsers()
         {
-            List<User> _users = new List<User>
-            {
-                 new User { Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test" }
-            };
-            return _users;
+            return user.GetAll().ToList();
         }
     }
 }
