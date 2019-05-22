@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Owner\\source\\repos\\Core2_2ApiJwt\\Core2_2ApiJwt\\Core2_2ApiJwt.csproj": {}
+    "C:\\Users\\Owner\\Documents\\GitHub\\CoreJwtExample\\Core2_2ApiJwt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Owner\\source\\repos\\Core2_2ApiJwt\\Core2_2ApiJwt\\Core2_2ApiJwt.csproj": {
+    "C:\\Users\\Owner\\Documents\\GitHub\\CoreJwtExample\\Core2_2ApiJwt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Owner\\source\\repos\\Core2_2ApiJwt\\Core2_2ApiJwt\\Core2_2ApiJwt.csproj",
+        "projectUniqueName": "C:\\Users\\Owner\\Documents\\GitHub\\CoreJwtExample\\Core2_2ApiJwt.csproj",
         "projectName": "Core2_2ApiJwt",
-        "projectPath": "C:\\Users\\Owner\\source\\repos\\Core2_2ApiJwt\\Core2_2ApiJwt\\Core2_2ApiJwt.csproj",
+        "projectPath": "C:\\Users\\Owner\\Documents\\GitHub\\CoreJwtExample\\Core2_2ApiJwt.csproj",
         "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Owner\\source\\repos\\Core2_2ApiJwt\\Core2_2ApiJwt\\obj\\",
+        "outputPath": "C:\\Users\\Owner\\Documents\\GitHub\\CoreJwtExample\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

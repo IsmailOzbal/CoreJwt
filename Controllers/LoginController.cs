@@ -12,7 +12,7 @@ namespace Core2_2ApiJwt.Controllers
 {
     [Authorize]
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class LoginController : ControllerBase
     {
         private IToken _tokenService;

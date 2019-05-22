@@ -69,6 +69,10 @@ namespace Core2_2ApiJwt
             services.AddScoped<IToken,GetTokenAndAuthentication>();
             services.AddScoped<IGetUser, GetAllUser>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IGetChart, GetChartData>();
+            services.AddScoped<ISolveExam, GetSolvedExamList>();
+            services.AddScoped<IExamScore, GetChartExamScore>();
+            services.AddScoped<IAddExam, AddExamScore>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

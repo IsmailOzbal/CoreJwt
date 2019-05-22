@@ -12,3 +12,17 @@ C:\Users\Owner\source\repos\Core2_2ApiJwt\Core2_2ApiJwt\obj\Debug\netcoreapp2.2\
 C:\Users\Owner\source\repos\Core2_2ApiJwt\Core2_2ApiJwt\bin\Debug\netcoreapp2.2\Core2_2ApiJwt.pdb
 C:\Users\Owner\source\repos\Core2_2ApiJwt\Core2_2ApiJwt\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.dll
 C:\Users\Owner\source\repos\Core2_2ApiJwt\Core2_2ApiJwt\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.pdb
+C:\Users\Owner\Documents\GitHub\CoreJwtExample\bin\Debug\netcoreapp2.2\Core2_2ApiJwt.deps.json
+C:\Users\Owner\Documents\GitHub\CoreJwtExample\bin\Debug\netcoreapp2.2\Core2_2ApiJwt.runtimeconfig.json
+C:\Users\Owner\Documents\GitHub\CoreJwtExample\bin\Debug\netcoreapp2.2\Core2_2ApiJwt.runtimeconfig.dev.json
+C:\Users\Owner\Documents\GitHub\CoreJwtExample\bin\Debug\netcoreapp2.2\Core2_2ApiJwt.dll
+C:\Users\Owner\Documents\GitHub\CoreJwtExample\bin\Debug\netcoreapp2.2\Core2_2ApiJwt.pdb
+C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.csprojAssemblyReference.cache
+C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.RazorAssemblyInfo.cache
+C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.RazorAssemblyInfo.cs
+C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.AssemblyInfoInputs.cache
+C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.AssemblyInfo.cs
+C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.RazorTargetAssemblyInfo.cache
+C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.dll
+C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.pdb
