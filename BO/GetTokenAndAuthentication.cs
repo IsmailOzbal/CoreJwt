@@ -26,7 +26,7 @@ namespace Core2_2ApiJwt.BO
 
         public TokenResponse Authenticate(string username, string password)
         {
-            var user = _user.GetUsers().SingleOrDefault(x => x.Username == username && x.Password == password);
+            var user = _user.GetUsers().SingleOrDefault(x => x.Username == username && x.Password == Cryptography.Encrypt(password,_appSettings.Secret));
 
             // return null if user not found
             if (user == null)
@@ -44,8 +44,9 @@ namespace Core2_2ApiJwt.BO
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
 
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            
             TokenResponse tokenRes = new TokenResponse
             {
                 token = tokenHandler.WriteToken(token),
