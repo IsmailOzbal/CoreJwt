@@ -73,6 +73,19 @@ namespace Core2_2ApiJwt
             services.AddScoped<ISolveExam, GetSolvedExamList>();
             services.AddScoped<IExamScore, GetChartExamScore>();
             services.AddScoped<IAddExam, AddExamScore>();
+            services.AddScoped<IQuestions, GetQuestions>();
+            services.AddScoped<IAddUser, AddUser>();
+            services.AddScoped<IPassword, ChangePassword>();
+            services.AddScoped<IGetWord, GetAllWords>();
+            services.AddScoped<IAddWord, AddWord>();
+            services.AddScoped<IDeleteWord,DeleteWord>();
+            services.AddScoped<IUpdateWord, UpdateWord>();
+            services.AddScoped<IAddWordDescription, AddWordDescription>();
+            services.AddScoped<IWordDetailView, GetWordDetailView>();
+            services.AddScoped<IWordDetailViewById, GetWordDetailViewById>();
+            services.AddScoped<IAddSentence, AddSentence>();
+            services.AddScoped<IWordType, GetWordType>();
+            services.AddScoped<IAddWordType, AddWordType>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

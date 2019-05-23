@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Core2_2ApiJwt.Entities;
-using Core2_2ApiJwt.Interfaces;
+﻿using Core2_2ApiJwt.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using static Core2_2ApiJwt.Entities.Entity;
 

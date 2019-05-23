@@ -17,7 +17,6 @@ C:\Users\Owner\Documents\GitHub\CoreJwtExample\bin\Debug\netcoreapp2.2\Core2_2Ap
 C:\Users\Owner\Documents\GitHub\CoreJwtExample\bin\Debug\netcoreapp2.2\Core2_2ApiJwt.runtimeconfig.dev.json
 C:\Users\Owner\Documents\GitHub\CoreJwtExample\bin\Debug\netcoreapp2.2\Core2_2ApiJwt.dll
 C:\Users\Owner\Documents\GitHub\CoreJwtExample\bin\Debug\netcoreapp2.2\Core2_2ApiJwt.pdb
-C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.csprojAssemblyReference.cache
 C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.csproj.CoreCompileInputs.cache
 C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.RazorAssemblyInfo.cache
 C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.RazorAssemblyInfo.cs
