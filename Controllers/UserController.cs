@@ -1,6 +1,7 @@
 ﻿using Core2_2ApiJwt.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using static Core2_2ApiJwt.Entities.Entity;
 
 namespace Core2_2ApiJwt.Controllers
@@ -28,6 +29,20 @@ namespace Core2_2ApiJwt.Controllers
 
             return Ok(data);
         }
+
+        [HttpGet("GetUserById")]
+        public IActionResult GetUserById(string id)
+        {
+            int userId = int.Parse(id);
+            var data = getUser.GetUsers().Where(a=>a.Id== userId).ToList();
+
+            if (data == null)
+                return BadRequest(new { message = "Users data couldn`t get" });
+
+            return Ok(data);
+        }
+
+        [AllowAnonymous]
         [HttpPost("AddUser")]
         public IActionResult AddUser([FromBody]User user)
         {

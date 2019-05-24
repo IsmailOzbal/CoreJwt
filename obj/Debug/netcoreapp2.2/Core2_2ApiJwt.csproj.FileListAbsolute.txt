@@ -25,3 +25,4 @@ C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2Ap
 C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.RazorTargetAssemblyInfo.cache
 C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.dll
 C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.pdb
+C:\Users\Owner\Documents\GitHub\CoreJwtExample\obj\Debug\netcoreapp2.2\Core2_2ApiJwt.csprojAssemblyReference.cache

@@ -25,14 +25,15 @@ namespace Core2_2ApiJwt.BO
 
             try
             {
-                var data = (from a in _examRepo.GetAll()
-                            group a by a.Score into ab
-                            select new
-                            {
-                                name = ab.Key.ToString(),
-                                count = ab.Count()
 
-                            }).ToList();
+                var data = _examRepo.GetAll().GroupBy(s => new { s.Score },
+            (key, group) => new ChartScore
+            {
+                name = key.ToString(),
+                count = group.Count()
+            }).ToList();
+
+
 
                 string[] list = data.Select(a => a.name).ToArray();
                 int[] arrayData = data.Select(a => a.count).ToArray();
@@ -42,13 +43,13 @@ namespace Core2_2ApiJwt.BO
                 chart.Labels = list;
                 chart.series = series;
             }
-            catch
+            catch (Exception e)
             {
                 chart.series = "Exam Result";
                 return chart;
             }
 
-           
+
             return chart;
 
         }
