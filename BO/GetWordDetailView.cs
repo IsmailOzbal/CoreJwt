@@ -23,12 +23,14 @@ namespace Core2_2ApiJwt.BO
             _wordsSentencesRepo = uow.GetRepository<WordSampleSentences>();
             _wordTypeRepo = uow.GetRepository<WordType>();
         }
-        public List<WordView> GetView()
+        public List<WordView> GetView(string Id)
         {
+            int userId = int.Parse(Id);
             var data = (from a in _wordsRepo.GetAll()
                         join b in _wordTypeRepo.GetAll() on a.WordTypeId equals b.Id
                         join d in _wordsDescRepo.GetAll() on a.Id equals d.WordsId into gj
                         join s in _wordsSentencesRepo.GetAll() on a.Id equals s.WordId into sj
+                        where a.UserId==userId
                         from x in gj.DefaultIfEmpty()
                         from y in sj.DefaultIfEmpty()
                         select new WordView

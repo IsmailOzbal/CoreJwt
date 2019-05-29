@@ -21,6 +21,7 @@ namespace Core2_2ApiJwt.Entities
             public int Id { get; set; }
             public int WordTypeId { get; set; }
             public string Word { get; set; }
+            public int UserId { get; set; }
         }
 
         public class WordDescription

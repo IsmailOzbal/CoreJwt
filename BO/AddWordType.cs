@@ -22,6 +22,7 @@ namespace Core2_2ApiJwt.BO
         {
             try
             {
+               
                 _wordsTypeRepo.Insert(type);
                 uow.SaveChanges();
                 retVal = true;

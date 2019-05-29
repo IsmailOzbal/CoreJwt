@@ -17,9 +17,9 @@ namespace Core2_2ApiJwt.Controllers
         }
 
         [HttpGet("GetQuestions")]
-        public IActionResult GetQuestions()
+        public IActionResult GetQuestions(string Id)
         {
-            var data = questions.GetQuestionList(10);
+            var data = questions.GetQuestionList(10,Id);
 
             if (data == null)
                 return BadRequest(new { message = "Questions data couldn`t get" });

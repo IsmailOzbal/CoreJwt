@@ -20,10 +20,12 @@ namespace Core2_2ApiJwt.BO
             _wordsTypeRepo = uow.GetRepository<WordType>();
         }
 
-        public Chart GetChartDataValue()
+        public Chart GetChartDataValue(string Id)
         {
+            int userId = int.Parse(Id);
             var data = (from a in _wordsRepo.GetAll()
                         join b in _wordsTypeRepo.GetAll() on a.WordTypeId equals b.Id
+                        where a.UserId==userId
                         group a by b.Type into ab
                         select new
                         {

@@ -8,6 +8,6 @@ namespace Core2_2ApiJwt.Interfaces
 {
     public interface IExamScore
     {
-        Chart GetExamScore();
+        Chart GetExamScore(string Id);
     }
 }

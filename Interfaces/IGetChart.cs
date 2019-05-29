@@ -8,6 +8,6 @@ namespace Core2_2ApiJwt.Interfaces
 {
     public interface IGetChart
     {
-        Chart GetChartDataValue();
+        Chart GetChartDataValue(string Id);
     }
 }

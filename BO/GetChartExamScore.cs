@@ -18,15 +18,15 @@ namespace Core2_2ApiJwt.BO
             uow = _uow;
             _examRepo = uow.GetRepository<Exam>();
         }
-        public Chart GetExamScore()
+        public Chart GetExamScore(string Id)
         {
 
             Chart chart = new Chart();
 
             try
             {
-
-                var data = _examRepo.GetAll().GroupBy(s => new { s.Score },
+                int userId = int.Parse(Id);
+                var data = _examRepo.GetAll().Where(a=>a.UserId==userId).GroupBy(s => new { s.Score },
             (key, group) => new ChartScore
             {
                 name = key.ToString(),

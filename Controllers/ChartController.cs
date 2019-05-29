@@ -18,9 +18,9 @@ namespace Core2_2ApiJwt.Controllers
         }
 
         [HttpGet("GetChartData")]
-        public IActionResult GetChart()
+        public IActionResult GetChart(string Id)
         {
-            var data = chartData.GetChartDataValue();
+            var data = chartData.GetChartDataValue(Id);
 
             if (data == null)
                 return BadRequest(new { message = "Chart data couldn`t get" });
@@ -29,9 +29,9 @@ namespace Core2_2ApiJwt.Controllers
         }
 
         [HttpGet("GetExamScore")]
-        public IActionResult GetChartExamScore()
+        public IActionResult GetChartExamScore(string Id)
         {
-            var data = chartExamScoreData.GetExamScore();
+            var data = chartExamScoreData.GetExamScore(Id);
 
             if (data == null)
                 return BadRequest(new { message = "Exam score data couldn`t get" });

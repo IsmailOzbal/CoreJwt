@@ -18,9 +18,9 @@ namespace Core2_2ApiJwt.Controllers
         }
 
         [HttpGet("GetWordDetailView")]
-        public IActionResult GetWordDetailView()
+        public IActionResult GetWordDetailView(string Id)
         {
-            var data = wordDetail.GetView();
+            var data = wordDetail.GetView(Id);
 
             if (data == null)
                 return BadRequest(new { message = "Word details data couldn`t get" });

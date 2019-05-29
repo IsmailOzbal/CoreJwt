@@ -20,10 +20,12 @@ namespace Core2_2ApiJwt.BO
             _examRepo = uow.GetRepository<Exam>();
             _userRepo = uow.GetRepository<User>();
         }
-        public List<ExamView> GetExam()
+        public List<ExamView> GetExam(string Id)
         {
+            int userId = int.Parse(Id);
             var data = (from a in _examRepo.GetAll()
                         join b in _userRepo.GetAll() on a.UserId equals b.Id
+                        where a.UserId==userId
                         select new ExamView
                         {
                             UserName = b.FirstName + " " + b.LastName,

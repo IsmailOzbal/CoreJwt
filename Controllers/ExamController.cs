@@ -19,9 +19,9 @@ namespace Core2_2ApiJwt.Controllers
         }
 
         [HttpGet("GetSolveExam")]
-        public IActionResult GetSolveExam()
+        public IActionResult GetSolveExam(string Id)
         {
-            var data = solveExamData.GetExam();
+            var data = solveExamData.GetExam(Id);
 
             if (data == null)
                 return BadRequest(new { message = "Application don't find solved exam" });

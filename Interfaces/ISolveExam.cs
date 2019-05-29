@@ -8,6 +8,6 @@ namespace Core2_2ApiJwt.Interfaces
 {
     public interface ISolveExam
     {
-        List<ExamView> GetExam();
+        List<ExamView> GetExam(string Id);
     }
 }

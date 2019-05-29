@@ -8,6 +8,6 @@ namespace Core2_2ApiJwt.Interfaces
 {
     public interface IQuestions
     {
-        List<Questions> GetQuestionList(int count);
+        List<Questions> GetQuestionList(int count,string Id);
     }
 }

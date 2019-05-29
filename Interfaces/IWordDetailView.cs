@@ -8,6 +8,6 @@ namespace Core2_2ApiJwt.Interfaces
 {
     public interface IWordDetailView
     {
-        List<WordView> GetView();
+        List<WordView> GetView(string Id);
     }
 }
