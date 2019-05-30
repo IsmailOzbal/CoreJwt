@@ -14,12 +14,14 @@ namespace Core2_2ApiJwt.Controllers
         private readonly IAddWord addWord;
         private readonly IUpdateWord updateWord;
         private readonly IDeleteWord deleteWord;
-        public WordController(IGetWord _getWord, IAddWord _addWord, IUpdateWord _updateWord, IDeleteWord _deleteWord)
+        private readonly IGetWordLevel wordLevel;
+        public WordController(IGetWord _getWord, IAddWord _addWord, IUpdateWord _updateWord, IDeleteWord _deleteWord, IGetWordLevel _wordLevel)
         {
             getWord = _getWord;
             addWord = _addWord;
             updateWord = _updateWord;
             deleteWord = _deleteWord;
+            wordLevel = _wordLevel;
         }
 
         [HttpGet("GetWord")]
@@ -29,6 +31,17 @@ namespace Core2_2ApiJwt.Controllers
 
             if (data == null)
                 return BadRequest(new { message = "Words data couldn`t get" });
+
+            return Ok(data);
+        }
+
+        [HttpGet("GetWordLevel")]
+        public IActionResult GetWordLevel()
+        {
+            var data = wordLevel.GetLevel();
+
+            if (data == null)
+                return BadRequest(new { message = "Word level data couldn`t get" });
 
             return Ok(data);
         }

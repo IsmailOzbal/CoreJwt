@@ -24,6 +24,7 @@ namespace Core2_2ApiJwt.Context.DbOperation
         public DbSet<WordSampleSentences> WordSampleSentencess { get; set; }
         public DbSet<WordType> WordTypes { get; set; }
         public DbSet<Exam> Exams { get; set; }
+        public DbSet<WordsLevel> WordsLevels { get; set; }
         public void BeginTransaction()
         {
             transaction = _context.Database.BeginTransaction();

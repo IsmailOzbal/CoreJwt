@@ -87,6 +87,9 @@ namespace Core2_2ApiJwt
             services.AddScoped<IWordType, GetWordType>();
             services.AddScoped<IAddWordType, AddWordType>();
             services.AddScoped<ILanguauge, GetAllLanguage>();
+            services.AddScoped<IGetNotCompleteWord,GetNotCompleteWord>();
+            services.AddScoped<IGetWordLevel, GetWordLevel>();
+            services.AddScoped<IGetChartWordLevel, GetChartWordLevel>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

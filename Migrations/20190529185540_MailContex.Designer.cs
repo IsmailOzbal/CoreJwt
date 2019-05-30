@@ -4,14 +4,16 @@ using Core2_2ApiJwt.Context.DbOperation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Core2_2ApiJwt.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20190529185540_MailContex")]
+    partial class MailContex
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -125,26 +127,11 @@ namespace Core2_2ApiJwt.Migrations
 
                     b.Property<string>("Word");
 
-                    b.Property<int>("WordLevelId");
-
                     b.Property<int>("WordTypeId");
 
                     b.HasKey("Id");
 
                     b.ToTable("Wordss");
-                });
-
-            modelBuilder.Entity("Core2_2ApiJwt.Entities.Entity+WordsLevel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Level");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("WordsLevels");
                 });
 #pragma warning restore 612, 618
         }

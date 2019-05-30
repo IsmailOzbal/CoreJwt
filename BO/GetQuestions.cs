@@ -29,7 +29,10 @@ namespace Core2_2ApiJwt.BO
                                join b in _wordsRepo.GetAll() on a.WordsId equals b.Id
                                where b.UserId == userId
                                select a).ToList();
-            var _words = _wordsRepo.GetAll().Where(a => a.UserId == userId).ToList();
+            var _words = (from a in _wordsDesc.GetAll()
+                          join b in _wordsRepo.GetAll() on a.WordsId equals b.Id
+                          where b.UserId == userId
+                          select b).ToList(); ;
             string[] words = _words.Select(a => a.Word).ToArray();
             string[] desc = description.Select(a => a.Description).ToArray();
             if(description.Count>=10 || _words.Count >=10)

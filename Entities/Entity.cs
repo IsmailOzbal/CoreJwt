@@ -22,6 +22,14 @@ namespace Core2_2ApiJwt.Entities
             public int WordTypeId { get; set; }
             public string Word { get; set; }
             public int UserId { get; set; }
+            public int WordLevelId { get; set; }
+        }
+
+        public class WordsLevel
+        {
+            [Key]
+            public int Id { get; set; }
+            public string Level { get; set; }
         }
 
         public class WordDescription
@@ -65,6 +73,7 @@ namespace Core2_2ApiJwt.Entities
             public string LastName { get; set; }
             public string Username { get; set; }
             public string Password { get; set; }
+            public string Email { get; set; }
         }
     }
 }
