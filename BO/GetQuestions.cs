@@ -46,13 +46,14 @@ namespace Core2_2ApiJwt.BO
                     Questions que = new Questions();
                     que.count = i + 1;
                     que.tag = words[rand_number];
-                    int number = _words.Where(a => a.Word == words[rand_number]).Select(a => a.Id).FirstOrDefault();
+                    var number = _words.Where(a => a.Word == words[rand_number]).FirstOrDefault();
                     int answer = rnd.Next(1, 4);
-                    que.answerone = answer == 1 ? description.Where(a => a.WordsId == number).Select(a => a.Description).FirstOrDefault() : desc[randomNumbers[1]];
-                    que.answertwo = answer == 2 ? description.Where(a => a.WordsId == number).Select(a => a.Description).FirstOrDefault() : desc[randomNumbers[2]];
-                    que.answerthree = answer == 3 ? description.Where(a => a.WordsId == number).Select(a => a.Description).FirstOrDefault() : desc[randomNumbers[3]];
-                    que.answerfour = answer == 4 ? description.Where(a => a.WordsId == number).Select(a => a.Description).FirstOrDefault() : desc[randomNumbers[4]];
-                    que.correctanswer = description.Where(a => a.WordsId == number).Select(a => a.Description).FirstOrDefault();
+                    que.levelid = number.WordLevelId;
+                    que.answerone = answer == 1 ? description.Where(a => a.WordsId == number.Id).Select(a => a.Description).FirstOrDefault() : desc[randomNumbers[1]];
+                    que.answertwo = answer == 2 ? description.Where(a => a.WordsId == number.Id).Select(a => a.Description).FirstOrDefault() : desc[randomNumbers[2]];
+                    que.answerthree = answer == 3 ? description.Where(a => a.WordsId == number.Id).Select(a => a.Description).FirstOrDefault() : desc[randomNumbers[3]];
+                    que.answerfour = answer == 4 ? description.Where(a => a.WordsId == number.Id).Select(a => a.Description).FirstOrDefault() : desc[randomNumbers[4]];
+                    que.correctanswer = description.Where(a => a.WordsId == number.Id).Select(a => a.Description).FirstOrDefault();
                     questions.Add(que);
                 }
             }

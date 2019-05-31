@@ -21,5 +21,6 @@ namespace Core2_2ApiJwt.Entities.DTO
 
         public string correctanswer { get; set; }
 
+        public int levelid { get; set; }
     }
 }
